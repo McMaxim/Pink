@@ -1,0 +1,105 @@
+.logo {
+  cursor: pointer;
+
+  &--header svg {
+    fill: @color-white;
+    color: @color-white;
+  }
+
+  &--footer svg {
+    fill: @color-pink;
+    color: @color-blue;
+  }
+
+  &:hover svg {
+    fill: @color-pink;
+    color: @color-pink;
+  }
+
+  &--header:focus-visible {
+    outline: 2px solid fade(@color-white, 30%);
+    outline-offset: 4px;
+  }
+
+  &--footer:focus-visible {
+    outline: 2px solid fade(@color-blue, 30%);
+    outline-offset: 4px;
+  }
+
+  &--header:active svg {
+    color: fade(@color-white, 30%);
+    fill: fade(@color-white, 30%);
+  }
+
+  &--footer:active svg {
+    fill: fade(@color-pink, 30%);
+    color: fade(@color-blue, 30%);
+  }
+}
+
+.logo--header {
+  width: 74px;
+  height: 23px;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
+  }
+}
+
+.logo--header .logo__mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.logo--header .logo__tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo--header .logo__desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.logo--footer {
+  width: 145px;
+  height: 40px;
+
+  @media (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
+  }
+}
+
+.logo--footer .logo__tablet {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo--footer .logo__desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}

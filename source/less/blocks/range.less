@@ -1,0 +1,38 @@
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: @color-blue;
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+}
+
+.range__toggle {
+  .button();
+
+  position: absolute;
+  top: -5px;
+  right: -7px;
+
+  width: 14px;
+  height: 14px;
+  border: 2px solid @color-pink;
+  border-radius: 50%;
+
+  background-color: @color-white;
+
+  &:hover {
+    background-color: @color-pink;
+  }
+
+  &:focus {
+    background-color: @color-pink;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @color-pink;
+  }
+}

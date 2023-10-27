@@ -1,0 +1,33 @@
+.effects {
+  .list();
+}
+
+.effects__button {
+  .button();
+
+  width: 56px;
+  height: 56px;
+}
+
+.effects__button svg {
+  display: block;
+  margin: auto;
+
+  fill: fade(@color-blue, 30%);
+
+  .effects__item--crop & {
+    margin-left: 0;
+  }
+
+  &:hover {
+    fill: fade(@color-blue, 50%);
+  }
+
+  &:active {
+    fill: @color-pink;
+  }
+
+  .effects__item--current & {
+    fill: @color-pink;
+  }
+}

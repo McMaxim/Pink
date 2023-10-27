@@ -1,0 +1,138 @@
+.reviews__wrapper {
+  .wrapper();
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 41px;
+  padding-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 184px;
+    padding-bottom: 33px;
+
+    background-image: url("../../img/quotes.svg");
+    background-size: 79px 63px;
+    background-position: top 72px center;
+    background-repeat: no-repeat;
+  }
+}
+
+.reviews__list {
+  .list ();
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+    margin-bottom: 0;
+  }
+}
+
+.reviews__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.reviews__blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+}
+
+.reviews__auhtor {
+  margin-bottom: 13px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    margin-bottom: -1px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 2px;
+
+    font-size: 24px;
+  }
+}
+
+.reviews__auhtor-details {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    order: 3;
+
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+
+    margin-bottom: 36px;
+  }
+}
+
+.reviews__controls {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 28px;
+    content: "";
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+}
+
+.reviews__toggles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 12px);
+  gap: 13px;
+  align-items: center;
+
+  max-width: 256px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

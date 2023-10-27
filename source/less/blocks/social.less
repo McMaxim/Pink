@@ -1,0 +1,45 @@
+.social__list {
+  .list();
+}
+
+.social__link {
+  .button();
+  position: relative;
+
+  width: 54px;
+  height: 54px;
+  border: 3px solid fade(@color-blue, 10%);
+  border-radius: 50%;
+
+  &:hover {
+    border-color: @color-blue;
+  }
+
+  &:focus-visible {
+    border-color: @color-blue;
+  }
+
+  &:active {
+    border-color: fade(@color-blue, 10%);
+
+    .social__icon {
+      fill: fade(@color-pink, 30%);
+    }
+  }
+}
+
+.social__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  fill: @color-pink;
+
+  .social__item--youtube & {
+    top: 1px;
+    right: -4px;
+  }
+}

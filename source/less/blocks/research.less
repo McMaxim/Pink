@@ -1,0 +1,114 @@
+.research {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-gray;
+  }
+}
+
+.research__wrapper {
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 365px;
+
+    background-image: url("../../img/effect-24-tablet.svg");
+    background-size: 238px 276px;
+    background-repeat: no-repeat;
+    background-position: top 54px left @mobile-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    min-height: 429px;
+
+    background-image: url("../../img/effect-24-desktop.svg");
+    background-size: 298px 345px;
+    background-position: top 17px left @desktop-padding + 1;
+  }
+}
+
+.research__content {
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+
+    padding-top: 96px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 30px;
+    padding-top: 112px;
+  }
+}
+
+.research__slogan {
+  @media (min-width: @tablet-width) {
+    max-width: 66%;
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 100%;
+    margin-bottom: 25px;
+
+    line-height: 30px;
+  }
+}
+
+.research__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 31px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.research__link {
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+    color: @color-pink;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    color: @color-blue;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-blue;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: fade(@color-blue, 30%);
+    text-decoration: none;
+  }
+}

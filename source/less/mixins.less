@@ -1,0 +1,31 @@
+.list () {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.wrapper {
+  padding: 0 @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 @desktop-padding;
+  }
+}

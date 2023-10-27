@@ -1,0 +1,238 @@
+.photos__head {
+  .wrapper();
+  padding-top: 44px;
+  padding-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 91px;
+    padding-bottom: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 91px;
+    padding-bottom: 89px;
+  }
+}
+
+.photos__slogan {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 84px;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 184px;
+  }
+}
+
+.photos__panorama-image {
+  position: relative;
+}
+
+.photos__panorama-image img {
+  width: 100%;
+}
+
+.photos__panorama-title {
+  position: absolute;
+  top: 0;
+  right: @mobile-padding;
+  min-width: 128px;
+  padding: 6px;
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-white;
+
+  background-color: @color-pink;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 54px;
+    right: @desktop-padding;
+  }
+}
+
+.photos__panorama-description-container {
+  .wrapper();
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.photos__catalog {
+  .wrapper();
+}
+
+.photos__list {
+  .list();
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 54px;
+  }
+}
+
+.photos__item {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.photos__image img {
+  width: 100%;
+}
+
+.photos__description {
+  position: relative;
+  display: grid;
+  gap: 13px;
+
+  padding: 18px 17px;
+
+  background-color: @color-gray;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 1fr min-content;
+
+    min-height: 155px;
+    padding: 23px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 31px 22px 27px;
+  }
+}
+
+.photos__panorama .photos__description {
+  gap: 11px;
+
+  min-height: auto;
+  padding-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: min-content;
+    gap: 0;
+
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
+    padding-bottom: 23px;
+  }
+}
+
+.photos__quote {
+  margin: 0;
+}
+
+.photos__source {
+  margin-bottom: -1px;
+}
+
+.photos__panorama .photos__source {
+  margin-bottom: 0;
+}
+
+.photos__author {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.photos__date {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.photos__review {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.photos__like {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+}
+
+.photos__panorama .photos__like {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    justify-content: end;
+  }
+}
+
+.photos__like-button {
+  .button();
+  min-width: 13px;
+  height: 12px;
+  margin-right: 18px;
+
+  transform: translateY(-1px);
+
+  background-image: url("../../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    margin-right: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-blue;
+    outline-offset: 2px;
+  }
+}
+
+.photos__like-caption {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @color-pink;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
